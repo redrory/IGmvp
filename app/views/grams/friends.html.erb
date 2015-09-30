@@ -22,7 +22,8 @@ h = Hash.new { 0 }
 %>
 
 <% @mvp =  h.sort_by { |name,age | age}.reverse %>
-<% @choice = @mvp.take(5) %>
+<% @choice = @mvp.take(2) %>
+<!-- need to only call public profiles -->
 
 <div id="mvps">
   <ol>

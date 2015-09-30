@@ -25,7 +25,7 @@ class GramsController < ApplicationController
 
   def friends
     @client = Instagram.client(:access_token => current_user.token)
-    @mymediaR = @client.user_recent_media.take(15)
+    @mymediaR = @client.user_recent_media.take(5)
     @ids = @mymediaR.map(&:id)
   end
 
