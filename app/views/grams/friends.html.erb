@@ -11,10 +11,15 @@
     <% @images = @client.media_likes(id)%>
       <% @images.each do |image| %>
           <% @all << image.id %>
+
+
+
       <% end %>
   <% end %>
 
 <% @count %>
+
+
 
 <%
 h = Hash.new { 0 }
@@ -41,6 +46,7 @@ h = Hash.new { 0 }
                 <div id ="name">Name: <%= link_to id.full_name, "http://www.instagram.com/#{id.username}" %> </div>
 
                 <div id ="likes">Likes: <span class="badge"><%= choice.last %></span></div>
+
             </div>
 
             </li>
